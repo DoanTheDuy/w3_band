@@ -92,7 +92,7 @@
                                     <h1 class="place-name">San Francisco</h1>
                                     <p class="ticket-time">29th November</p>
                                     <p class="place-data">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                    <a href="#" class="ticket-btn">Buy Tickets</a>
+                                    <button class="ticket-btn js-buy-ticket">Buy Tickets</button>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +103,7 @@
                                     <h1 class="place-name">San Francisco</h1>
                                     <p class="ticket-time">29th November</p>
                                     <p class="place-data">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                    <a href="#" class="ticket-btn">Buy Tickets</a>
+                                    <button class="ticket-btn js-buy-ticket">Buy Tickets</button>
                                 </div>
             
                             </div>
@@ -115,7 +115,7 @@
                                     <h1 class="place-name">San Francisco</h1>
                                     <p class="ticket-time">29th November</p>
                                     <p class="place-data">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                    <a href="#" class="ticket-btn">Buy Tickets</a>
+                                    <button class="ticket-btn js-buy-ticket">Buy Tickets</button>
                                 </div>
                             </div>
                         </div>
@@ -159,7 +159,7 @@
                 <input type="text" class="modal-input" placeholder="Enter email">
 
                 <button id="buy-tickets">
-                    Pay
+                    PAY
                     <i class="ti-check"></i>
                 </button>
             </div>
@@ -173,5 +173,19 @@
 
         </div>
     </div>
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const modal = document.querySelector('.modal')
+
+        function showBuyTicket () {
+            alert('Show')
+        }
+
+        for (const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTicket)
+        }
+
+
+    </script>
 </body>
 </html>
