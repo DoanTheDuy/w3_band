@@ -8,6 +8,45 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.row {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+
+.col-third {
+    width: 33.33333%;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+/* Main  */
 #main {
     position: relative;
 }
@@ -133,7 +172,9 @@ html {
     letter-spacing: 4px;
     font-weight: 400;
 
+
 }
+
 
 #content .section-sub-heading {
     font-size: 15px;
@@ -147,14 +188,14 @@ html {
     text-align: justify;
     font-size: 15px;
     margin: 15px;
+}
 
+.member-list {
+    margin-top: 47px;
 }
 
 #content .member-item {
-    float: left;
-    padding-top: 47px;
     text-align: center;
-    width: 33.33333%;
 }
 
 #content .member-name {
@@ -210,15 +251,10 @@ html {
 /* PLACES */
 
 .places-section {
-    margin: 32px 8px 0;
+    margin-top: 32px;
+    padding-bottom: 48px;
 }
 
-.place-item {
-    float: left;
-    width: 33.33333%;
-    padding: 0 8px;
-    margin-bottom: 48px;
-}
 
 .place-img {
     width: 100%;
@@ -271,6 +307,7 @@ html {
 }
 
 
+
 #footer {
 
 }
@@ -296,6 +333,7 @@ html {
     width: 900px;
     position: relative;
     min-height: 200px;
+    animation: modalFadeIn ease .5s;
 }
 
 
@@ -361,4 +399,53 @@ html {
 
 .modal-footer a {
     color: #2196F3;
+}
+  
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-content {
+    margin-top: 48px;
+
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+
+}
+
+.contact-info i[class*="ti-"] {
+    display: inline-block;
+    width: 40px;
+}
+
+.contact-form {
+    font-size: 15px;
+
+}
+
+.contact-form .form-control{
+    padding: 12px;
+    border: 1px solid #ccc;
+    width: 100%;
+
+}
+
+.form-submit-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 11px 16px;
+    border: 1px solid #000;
+    float: right;
+    margin-right: 16px;
 }
