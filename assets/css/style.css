@@ -165,6 +165,10 @@ html {
     clear: both;
 }
 
+.content-section {
+    padding: 36px 0 124px;
+}
+
 #content .section-heading {
     text-align: center;
     font-size: 30px;
@@ -250,11 +254,6 @@ html {
 }
 /* PLACES */
 
-.places-section {
-    margin-top: 32px;
-    padding-bottom: 48px;
-}
-
 
 .place-img {
     width: 100%;
@@ -271,11 +270,6 @@ html {
     color: #000;
     padding: 16px;
     font-size: 15px;
-}
-
-.place-infor{
-
-
 }
 
 .place-name{
@@ -304,6 +298,7 @@ html {
 
 .ticket-btn:hover {
     opacity: 0.6;
+    cursor: pointer;
 }
 
 
@@ -355,6 +350,7 @@ html {
     color: #fff;
     padding: 16px;
 }
+
 .modal-close-icon:hover {
     background-color: #ccc;
 }
@@ -388,8 +384,9 @@ html {
     color: #fff;
 }
 
-#buy-tickets:hover  {
-    background-color: #ccc;
+#buy-tickets:hover {
+    opacity: 0.6;
+    cursor: pointer;
 }
 
 .modal-footer p {
@@ -400,7 +397,7 @@ html {
 .modal-footer a {
     color: #2196F3;
 }
-  
+
 @keyframes modalFadeIn {
     from {
         transform: translateY(-150px);
@@ -434,11 +431,10 @@ html {
 
 }
 
-.contact-form .form-control{
+.contact-form .form-control {
     padding: 12px;
     border: 1px solid #ccc;
     width: 100%;
-
 }
 
 .form-submit-btn {
@@ -449,3 +445,35 @@ html {
     float: right;
     margin-right: 16px;
 }
+
+.form-submit-btn:hover {
+    cursor: pointer;
+    background-color: #ccc;
+
+}
+
+.map-section img {
+    width: 100%;
+}
+
+#footer {
+    text-align: center;
+    padding: 64px 16px;
+}
+.social-section a{
+    text-decoration: none;
+    color: #000;
+    margin: 2px;
+    font-size: 24px;
+}
+
+.copyright {
+    margin: 15px;
+}
+
+.social-section a:hover{
+    opacity: 0.5;
+}
+
+
+
