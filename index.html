@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Band</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/128/876/876766.png">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
 </head>
 <body>
@@ -22,15 +24,19 @@
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="">Merchandise</a></li>
-                        <li><a href="">extras</a></li>
-                        <li><a href="">Media</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">extras</a></li>
+                        <li><a href="#">Media</a></li>
                     </ul>
                 </li>
             </ul>
 
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
             </div>
             
         </div>
@@ -240,5 +246,33 @@
         })
 
     </script>
+
+    <script>
+        var header = document.getElementById('header')
+        var mobileMenu = document.getElementById('mobile-menu')
+        var headerHeight = header.clientHeight
+        
+        // Dong mo mobile menu
+
+        mobileMenu.onclick = function() {
+            var isClose = header.clientHeight === headerHeight
+            if (isClose) {
+                header.style.height = 'auto'
+            } else {
+                header.style.height = null
+            }
+        }
+
+        // Tu dong dong khi chon menu
+        var menuItems = document.querySelectorAll('.nav li a[href*="#"]')
+        for(var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i]
+            menuItem.onclick = function() {
+                header.style.height = null
+            }
+        }
+    </script>
+
+
 </body>
 </html>

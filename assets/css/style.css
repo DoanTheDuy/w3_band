@@ -58,6 +58,7 @@ html {
     background-color: #000;
     position: fixed;
     z-index: 1;
+    overflow: hidden;
 }
 
 #header .nav {
@@ -69,32 +70,49 @@ html {
     padding: 0 24px;
     position: relative;
 }
+#mobile-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
 
+#header .mobile-menu-btn,
 #header .search-btn {
     float: right;
     padding: 12px 24px;
 }
+
+#header .mobile-menu-btn:hover {
+    background: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon{
+    color: #000;
+}
+
 
 #header .search-btn:hover {
     cursor: pointer;
     background-color: #f44336;
 }
 
+.menu-icon,
 #header .search-icon {
     color: #fff;
     font-size: 20px;
 }
 
+
+
+
+
 .nav > li > a {
     color: #fff;
-}
-
-
-.nav > li > a {
     text-decoration: none;
     text-transform: uppercase;
     line-height: 46px;
-    display: inline-block;
+    display: block;
 }
 
 .nav li:hover {
@@ -161,9 +179,7 @@ html {
     padding-bottom: 47px;
 }
 
-.clear {
-    clear: both;
-}
+
 
 .content-section {
     padding: 36px 0 124px;
@@ -303,9 +319,6 @@ html {
 
 
 
-#footer {
-
-}
 
 .modal {
     position: fixed;
