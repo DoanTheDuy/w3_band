@@ -13,8 +13,21 @@
 /* Mobile */
 @media (max-width:739px) {
     
+    #header {
+        overflow: hidden;
+    }
+
     #header .nav {
         display: block;
+    }
+
+    .nav .subnav {
+        position: initial;
+        background: #333;
+    }
+
+    .nav .subnav a {
+        color: #fff;
     }
 
     #header .nav > li {
